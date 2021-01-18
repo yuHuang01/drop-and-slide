@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop and Slide</title>
+    <link rel="stylesheet" href="das.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="das.js" defer></script>
+</head>
+<body>
+    <nav id="navbar">
+        <span class="material-icons" id="logo">theaters</span>
+        <ul id="navbar-nav">
+            <li class="nav-link" id="one">movie 1</li>
+            <li class="nav-link" id="two">movie 2</li>
+            <li class="nav-link" id="three">movie 3</li>
+            <li class="nav-link" id="four">movie 4</li>
+            <li class="nav-link" id="five">movie 5</li>
+        </ul>
+    </nav>
+    <div id="drop-div">
+        <div id="drop-one" class="drop-menu">
+            <p class="title">Inception</p>
+            <p class="star-casts"> 
+                <strong>Director:</strong>  <br> 
+                Christopher Nolan <br>
+                <strong>Writer:</strong> Christopher Nolan <br>
+                <strong>Stars:</strong> Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page </p>
+        </div>
+        <div id="drop-two" class="drop-menu">
+            <p class="title">Joker</p>
+            <p class="star-casts">
+                <strong>Director:</strong> <br>
+                Todd Phillips <br>
+                <strong>Writers:</strong> <br>
+                Todd Phillips, Scott Silver 
+                <strong>Stars:</strong> <br>
+                Joaquin Phoenix, Robert De Niro, Zazie Beetz 
+            </p>
+        </div>
+        <div id="drop-three" class="drop-menu">
+            <p class="title">Untouchable</p>
+            <p class="star-casts">
+                <strong>Directors:</strong> <br> 
+                Olivier Nakache, Éric Toledano <br>
+                <strong>Writers:</strong> <br> 
+                Olivier Nakache, Philippe Pozzo di Borgo (adapted from his autobiographical tale Le Second Souffle) <br>
+                <strong>Stars:</strong> <br>
+                François Cluzet, Omar Sy, Anne Le Ny
+            </p>
+        </div>
+        <div id="drop-four" class="drop-menu">
+            <p class="title">Django Unchained</p>
+            <p class="star-casts">
+                <strong>Director:</strong> <br>
+                Quentin Tarantino <br>
+                <strong>Writer:</strong> <br>
+                Quentin Tarantino <br>
+                <strong>Stars:</strong> <br>
+                Jamie Foxx, Christoph Waltz, Leonardo DiCaprio
+            </p>
+        </div>
+        <div id="drop-five" class="drop-menu">
+            <p class="title">Interstellar</p>
+            <p class="star-casts">
+                <strong>Director:</strong> <br> 
+                Christopher Nolan<br>
+                <strong>Writers:</strong> <br>
+                Jonathan Nolan, Christopher Nolan <br>
+                <strong>Stars:</strong> <br>
+                Matthew McConaughey, Anne Hathaway, Jessica Chastain
+            </p>
+        </div>
+    </div>
+    <div id="container">
+        <div id="slide">
+            <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_.jpg" class="movieImg">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJKLiEyyz1Q9RC8EBYl3ijr3nuGeyO2ETmwy6Kdq0AQtD0elWD" class="movieImg">
+            <img src="https://upload.wikimedia.org/wikipedia/en/9/93/The_Intouchables.jpg" class="movieImg">
+            <img src="https://m.media-amazon.com/images/M/MV5BMjIyNTQ5NjQ1OV5BMl5BanBnXkFtZTcwODg1MDU4OA@@._V1_UY1200_CR90,0,630,1200_AL_.jpg" class="movieImg">
+            <img src="https://resizing.flixster.com/wf1ARFq3jaX1TLl9GeZ1ZhaTLCY=/206x305/v2/https://flxt.tmsimg.com/assets/p10543523_p_v10_aa.jpg" class="movieImg">
+        </div> 
+        <form id="form">
+            <h1>Which is your favourite movie from above?</h1>
+            <label class="label" for="userName">What's your name?</label>
+            <input type="text" name="userName">
+            <label class="label" for="age">How old are your?</label>
+            <input type="number" aria-valuemin="0" aria-valuemax="100" name="age">
+            <label class="label" for="choice">What is your choice?</label>
+            <select name="favourite" id="fav">
+                <option value="inception">Inception</option>
+                <option value="joker">Joker</option>
+                <option value="untouchable">Untouchable</option>
+                <option value="django unchained">Django Unchained</option>
+                <option value="interstellar">Interstellar</option>
+            </select>
+            <button type="submit" id="submit">
+                Submit
+            </button>
+        </form>
+        
+    </div>
+    
+</body>
+</html>
