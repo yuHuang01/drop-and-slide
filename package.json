@@ -1,0 +1,28 @@
+{
+  "name": "drop-and-slide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "das.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuHuang01/drop-and-slide.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuHuang01/drop-and-slide/issues"
+  },
+  "homepage": "https://github.com/yuHuang01/drop-and-slide#readme",
+  "devDependencies": {
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "dependencies": {
+    "prettier": "2.2.1",
+    "save-dev": "0.0.1-security"
+  }
+}

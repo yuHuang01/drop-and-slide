@@ -1,12 +1,18 @@
 :root{
     --big-sc-font-size: 16px;
+    --nav-bar-bg-color: #333333;
     --nav-bar-height: 3rem;
+    --nav-bar-font-size: 25px;
+    --img-width: 350px;
+    --container-bg-color: #2b2a2a;
+    --main-font-color: white;
 
     font-size: var(--big-sc-font-size);
 }
 * {
     padding: 0;
     margin: 0;
+    height: 100%;
 }
 
 
@@ -14,67 +20,72 @@
     position: fixed;
     top: 0px;
     left: 0px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: yellowgreen;
+    background-color: var(--nav-bar-bg-color);
     width: 100%;
-    color: white;
+    color: var(--main-font-color);
     height: var(--nav-bar-height);
+    z-index: 1;
 }
 #logo{
-    height: 25px;
+    height: 28px;
     margin-left: 10px;
+    margin-top: 10px;
 }
 #navbar-nav{
     position: absolute;
+    display: inline-flex;
     right: 0px;
+    height: 100%;
 }
 .nav-link{
-    display: inline-block;
-    font-size: 25px;
-    width: 150px;
+    font-size: var(--nav-bar-font-size);
+    width: 180px;
     text-align: center;
+    height: var(--nav-bar-height);
+    list-style: none;
+    display: block;
 }
-#drop-div{
-    top: var(--nav-bar-height);
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    width: 100%;
-}
-.drop-menu{
+
+.navbar-title{
+    padding-top: 10px;
+    height: 38px;
     position: relative;
-    width: 136px;
-    height: 300px;
-    padding: 7px;
-    margin-left: 2px;
-    border: solid gray 1px;
-    border-top: none;
-    display: none;
 }
-.title{
-    font-weight: bold;
-    font-size: 25px;
-}
-.visible{
+.drop{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    height: 80px;
+    opacity: 0;
+    list-style: none;
+    background-color: var(--container-bg-color);
+    border: solid gray 1px;
+    border-top: none;
+    padding: 5px;
 }
-#drop-one{
-    margin-right: 608px;
+.nav-link:hover .drop{
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
-#drop-two{
-    margin-right: 456px;
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
-#drop-three{
-    margin-right: 304px;
+.drop-li{
+    border-bottom: solid gray 1px;;
 }
-#drop-four{
-    margin-right: 152px;
+.drop-li a{
+    text-decoration: none;
+    color: var(--main-font-color);
 }
+
+
 #container{
     top: var(--nav-bar-height);
     width: 100%;
@@ -82,28 +93,47 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--container-bg-color);
 }
+
 #slide{
+    width: 100%;
+    height: 350px;
     margin-top: 20px;
-    width: 200%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #111010b2;
+    border-top: solid var(--nav-bar-bg-color) 2px;
+    border-bottom: solid var(--nav-bar-bg-color) 2px;
 }
 .movieImg{
-    height: 400px;
+    height: var(--img-width);
+    width: auto;
+    margin: 0px 10px 0px 10px;
 }
+.movieImg:first-child{
+    
+}
+
 #form{
-    margin-top: 30px;
+    margin-top: 35px;
     width: 700px;
+    height: 300px;
     display: flex;
     flex-direction: column;
-    background-color: wheat;
+    background-color: rgba(29, 28, 28, 0.5);
     padding: 15px;
     border-radius: 5px;
+    border-color: rgb(99, 57, 9);
+    border-width: 3px;
+    color: var(--main-font-color);
 }
 #form h1{
     margin-bottom: 10px;
+    align-self: center;
 }
 #submit{
     width: 100px;
@@ -111,4 +141,36 @@
     margin-top: 20px;
     font-size: 20px;
     align-self: center;
+}
+
+::-webkit-scrollbar{
+    background-color: var(--container-bg-color);
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--nav-bar-bg-color);
+    border-radius: 5px;
+}
+
+
+@media(max-width: 1000px){
+    .nav-link{
+        width: 130px;
+    }
+    :root{
+        --img-width:300px;
+    }
+    #form{
+        width: 500px;
+    }
+    #submit{
+        width: 80px;
+        font-size: 15px;
+        padding: 5px 10px 5px 10px;
+    }
+}
+@media(max-width: 650px){
+    #logo{
+        display:none
+    }
 }
