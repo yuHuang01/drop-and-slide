@@ -52,14 +52,23 @@
    
     <div id="container">
         <div id="slide">
-            <button type="button" class="slide-btn" id="pre"><-</button>
             <img src="/images/inception.jpeg" class="movieImg">
             <img src="/images/interstellar.jpeg" class="movieImg">
-            <img src="/images/intouchables.jpeg" class="movieImg">
+            <img src="/images/intouchables.jpeg" class="movieImg current">
             <img src="/images/django.jpeg" class="movieImg">
             <img src="/images/joker.jpeg" class="movieImg">
-            <button type="button" class="slide-btn" id="next">-></button>
-        </div> 
+        </div>
+        <div id="swap">
+            <button type="button" class="slide-btn" id="pre"><-</button>
+            <input type="radio" name="slide" class="swap-radio" id="one">
+            <input type="radio" name="slide" class="swap-radio" id="two">
+            <input type="radio" name="slide" class="swap-radio" id="three">
+            <input type="radio" name="slide" class="swap-radio" id="four">
+            <input type="radio" name="slide" class="swap-radio" id="five">
+            <input type="radio" name="slide" class="swap-radio" id="one">
+            <button type="button" class="slide-btn" id="next">-></button>  
+        </div>
+         
         <form id="form">
             <h1>Which is your favourite movie from above?</h1>
             <label class="label" for="userName">What's your name?</label>
