@@ -28,7 +28,7 @@ body{
     width: 100%;
     color: var(--main-font-color);
     height: var(--nav-bar-height);
-    z-index: 1;
+    z-index: 2;
 }
 #logo{
     height: 28px;
@@ -99,12 +99,27 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
 }
 
+#slide-container{
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 30px;
+    width: 100%;
+    height: 800px;
+}
+#slide-container > h1{
+    z-index: 1;
+    color: var(--main-font-color);
+    padding-top: 5px;
+}
 #slide{
+    display: none;
     width: 500%;
-    height: 400px;
+    height: 500px;
     position: absolute;
     top: 25px;
     display: flex;
@@ -117,7 +132,7 @@ body{
     border-bottom: solid var(--nav-bar-bg-color) 2px;
     overflow: hidden;
     animation-name: slide;
-    animation-duration: 30s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
     animation-direction: normal;
 }
@@ -143,6 +158,7 @@ body{
     width: var(--img-width);
     margin: 0px 10px 0px 10px;
     align-self: center;
+
 }
 
 #swap{
@@ -150,8 +166,8 @@ body{
     height: 30px;
     display: flex;
     justify-content: center;
-    position: relative;
-    top: 465px;
+    position: absolute;
+    top: 530px;
 }
 .slide-btn{
     height: 30px;
@@ -168,37 +184,6 @@ body{
 .swap-radio{
     margin-left: 12px;
     margin-right: 12px;
-}
-.current{
-    
-}
-
-
-#form{
-    margin-top: 490px;
-    margin-bottom: 30px;
-    width: 700px;
-    height: 300px;
-    top: 400px;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(29, 28, 28, 0.5);
-    padding: 15px;
-    border-radius: 5px;
-    border-color: rgb(99, 57, 9);
-    border-width: 3px;
-    color: var(--main-font-color);
-}
-#form h1{
-    margin-bottom: 10px;
-    align-self: center;
-}
-#submit{
-    width: 100px;
-    padding: 10px 20px 10px 20px;
-    margin-top: 20px;
-    font-size: 20px;
-    align-self: center;
 }
 
 ::-webkit-scrollbar{

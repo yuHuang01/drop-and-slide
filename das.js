@@ -1,10 +1,11 @@
-const images = document.getElementsByClassName('movieImg');
 const pre = document.getElementById('pre');
 const next = document.getElementById('next');
-const swapRadio = document.querySelectorAll('.swap-radio');
+const slider = document.getElementById('slide');
 
-swapRadio.forEach((radio) => {
-  radio.addEventListener('click', (e) => {
-    console.log(e.target);
-  });
+pre.addEventListener('click', () => {
+  
+});
+
+next.addEventListener('click', (e) => {
+  console.log(e.target);
 });
